@@ -1,0 +1,21 @@
+(Generate vehicle plate numbers) Assume a vehicle plate number consists of three uppercase
+letters followed by four digits. Write a program to generate a plate number.
+
+
+package lab.pkg2;
+public class Lab2 {
+    public static void main(String[] args) {
+        // total number of alphabets = 25 = 90-65
+        int f_letter = 65 + (int) (Math.random() * (90 - 65));
+        int s_letter = 65 + (int) (Math.random() * (90 - 65));
+        int t_letter = 65 + (int) (Math.random() * (90 - 65));
+        int Num_1 = (int) (Math.random() * 10);
+        int Num_2 = (int) (Math.random() * 10);
+        int Num_3 = (int) (Math.random() * 10);
+        int Num_4 = (int) (Math.random() * 10);
+        // Display number plate
+        System.out.println("" + (char) (f_letter) + " " + 
+                ((char) (s_letter)) + " " + ((char) (t_letter))
+                + "  " + Num_1 + Num_2 + Num_3 + Num_4);
+    }
+}
