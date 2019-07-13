@@ -17,5 +17,5 @@ public class Lab2 {
         System.out.println("" + (char) (f_letter) + " " + 
                 ((char) (s_letter)) + " " + ((char) (t_letter))
                 + "  " + Num_1 + Num_2 + Num_3 + Num_4);
-    }
+    } 
 }
