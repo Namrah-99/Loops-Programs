@@ -27,5 +27,5 @@ public class App {
             System.out.println("OVERWEIGHT");
         } else {
             System.out.println("OBESE");
-        }
+        } 
     }
