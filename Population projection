@@ -7,8 +7,6 @@ Write a program to display the population for each of the next five years. Assum
 
 
 
-
-
 package ap1;
 public class Ap1 {
     public static void main(String[] args) {
