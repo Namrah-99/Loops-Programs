@@ -1,0 +1,35 @@
+(Population projection) The U.S. Census Bureau projects population based on the following assumptions:
+■ One birth every 7 seconds
+■ One death every 13 seconds
+■ One new immigrant every 45 seconds
+Write a program to display the population for each of the next five years. Assume the current population is 312,032,486 and one year has 365 days.
+
+
+
+
+
+
+package ap1;
+public class Ap1 {
+    public static void main(String[] args) {
+            // [ 1 birth = 7 seconds | + ] ; [ 1 death = 13 seconds | - ] ; [ 1 immigrant = 45 seconds | + ]
+            // Number Of Seconds In Year = NSY , Births Per Year = BPY , Deaths Per Year = DPY , Immigrants Per Year = IPY ,Rate Per Year =rpy 
+        double currPop = 312032486;
+        double N = (365 * 24 * 60 * 60) ;
+        double B = NSY / 7;
+        double D = NSY / 13;
+        double I = NSY / 45;
+        double r = BPY - DPY + IPY;
+        System.out.println("Current Population = " + currPop);
+        System.out.println("Number Of Seconds In Year = " + N);
+        System.out.println("Briths Per Year = " + B );
+        System.out.println("Deaths Per Year = " + D);
+        System.out.println("Immigrants Per Year = " + I);
+        System.out.println("Rate Per Year = " + r);
+        System.out.println("PopulationAtEnd0fYear 1 = " + (int)(currPop + ( r * 1)));
+        System.out.println("PopulationAtEnd0fYear 2 = " + (int)(currPop + ( r * 2)));
+        System.out.println("PopulationAtEnd0fYear 3 = " + (int)(currPop + ( r * 3)));
+        System.out.println("PopulationAtEnd0fYear 4 = " + (int)(currPop + ( r * 4)));
+        System.out.println("PopulationAtEnd0fYear 5 = " + (int)(currPop + ( r * 5)));
+    }
+}
