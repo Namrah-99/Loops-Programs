@@ -1,0 +1,31 @@
+(Health application: BMI) Revise Listing 3.4, ComputeAndInterpretBMI.java, to let the user enter weight, feet, and inches. For example, if a person is 5 feet and 10 inches, you will enter 5 for feet and 10 for inches. 
+
+
+package appl1;
+import java.util.Scanner;
+public class App {
+    public static void main(String[] args) {
+        Scanner ii = new Scanner(System.in);
+        final double KP = 0.45359237;
+        final double MI = 0.0254;
+        double Wei = ii.nextDouble();
+        int F = ii.nextInt();
+        int In = ii.nextInt();
+        double Hei = In + (F * 12);
+        double Wei_In_Kilogrs = Wei * KP;
+        double Hei_In_Mets = Hei * MI;
+        double B_MI = Wei_In_Kilogrs / (Hei_In_Mets * Hei_In_Mets);
+        System.out.printf("Enter Weight in Pounds: ");
+        System.out.printf("Enter Feet: ");
+        System.out.printf("Enter Inches: ");
+        System.out.println("BMI is " + B_MI);
+        if (B_MI < 18.5) {
+            System.out.println("UNDERWEIGHT");
+        } else if (B_MI < 25) {
+            System.out.println("NORMAL");
+        } else if (B_MI < 30) {
+            System.out.println("OVERWEIGHT");
+        } else {
+            System.out.println("OBESE");
+        }
+    }
